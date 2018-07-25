@@ -49,7 +49,7 @@ namespace Geometry1
             O = new Pixel( 200, 200);
 
             line1 = new Line( C, E);
-            line2 = new Line( E, D);
+            line2 = new Line( E.x, E.y, D.x, D.y); //new Line( E, D); вызов второго конструктора
             box1 = new Box( C, B);
             circle1 = new Circle( O, 100);
         }
@@ -66,17 +66,17 @@ namespace Geometry1
 
         private void Draw(Line line)
         {
-            graphics.DrawLine(pen, line.x1, line.y1, line.x2, line.y2);
+            graphics.DrawLine(pen, line.begin.x, line.begin.y, line.ended.x, line.ended.y);
         }
 
         private void Draw(Box box)
         {
-            graphics.DrawRectangle(pen, box.x1, box.y1, box.width, box.height);
+            graphics.DrawRectangle(pen, box.corner1.x, box.corner1.y, box.width, box.height);
         }
 
         private void Draw(Circle circle)
         {
-            graphics.DrawEllipse(pen, circle.x1, circle.y1, circle.width, circle.height);
+            graphics.DrawEllipse(pen, circle.corner.x, circle.corner.y, circle.width, circle.height);
         }
     }
 }

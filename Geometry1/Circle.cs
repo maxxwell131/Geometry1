@@ -2,29 +2,22 @@
 {
     class Circle
     {
-        public int x, y;
+        public Pixel center;
         public int radius;
-        public int x1, y1;
+        public Pixel corner;
         public int width, height;
 
         public Circle(Pixel center, int radius)
         {
-            this.x = center.x;
-            this.y = center.y;
+            this.center = center;
             this.radius = radius;
-            this.x1 = this.x - this.radius;
-            this.y1 = this.y - this.radius;
+            this.corner = new Pixel( (this.center.x - this.radius), (this.center.y - this.radius));
             this.width = this.height = this.radius * 2;
         }
 
         public Circle(int x, int y, int radius)
+            : this( new Pixel( x, y), radius)
         {
-            this.x = x;
-            this.y = y;
-            this.radius = radius;
-            this.x1 = this.x - this.radius;
-            this.y1 = this.y - this.radius;
-            this.width = this.height = this.radius * 2;
         }
     }
 }
