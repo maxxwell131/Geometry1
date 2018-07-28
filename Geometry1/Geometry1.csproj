@@ -50,6 +50,9 @@
   <ItemGroup>
     <Compile Include="Box.cs" />
     <Compile Include="Circle.cs" />
+    <Compile Include="ColorBox.cs" />
+    <Compile Include="ColorCircle.cs" />
+    <Compile Include="ColorLine.cs" />
     <Compile Include="Geometry1.cs">
       <SubType>Form</SubType>
     </Compile>
