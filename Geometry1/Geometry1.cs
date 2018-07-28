@@ -63,8 +63,10 @@ namespace Geometry1
 
             line1 = new Line( C, E);
             line2 = new Line( E.x, E.y, D.x, D.y); //new Line( E, D); вызов второго конструктора
+
             box1 = new Box( C, B);
             box2 = new ColorBox(O, B, Color.Green);
+
             circle1 = new Circle( O, 100);
             circle2 = new ColorCircle( O, A, Color.Orange);
 
