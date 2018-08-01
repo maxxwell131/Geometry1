@@ -27,23 +27,29 @@ namespace Geometry1
         Graphics graphics;
         Pen pen;
 
-        Line line1;
-        Line line2;
+
 
         ColorLine cl1;
         ColorLine cl2;
 
-        Box box1;
-        ColorBox box2;
+        ColorBox colorBox;
 
         Circle circle1;
-        ColorCircle circle2;
+        Circle circle2;
+        Circle circle3;
+        Line line1;
+        Line line2;
+        Box box1;
+        Box box2;
 
-        Pixel A, B, C, D, E, O;
+        ColorCircle colorCircle;
+
+        Pixel A, B, C, D, E, O, F, G, H, I, J, K, L ,M;
 
         public Geometry1()
         {
             InitializeComponent();
+            InitSnowMan();
             Init();
             Draw();
         }
@@ -54,6 +60,7 @@ namespace Geometry1
             graphics = Graphics.FromImage(bitmap);
             pen = new Pen(Color.Blue);
 
+            /*
             A = new Pixel( 100, 300);
             B = new Pixel( 300, 300);
             C = new Pixel( 100, 100);
@@ -65,25 +72,53 @@ namespace Geometry1
             line2 = new Line( E.x, E.y, D.x, D.y); //new Line( E, D); вызов второго конструктора
 
             box1 = new Box( C, B);
-            box2 = new ColorBox(O, B, Color.Green);
+            colorBox = new ColorBox(O, B, Color.Green);
 
             circle1 = new Circle( O, 100);
-            circle2 = new ColorCircle( O, A, Color.Orange);
+            colorCircle = new ColorCircle( O, A, Color.Orange);
 
             cl1 = new ColorLine( A, D, Color.Red);
             cl2 = new ColorLine( B, C, Color.Red);
+            */
+        }
+
+        private void InitSnowMan()
+        {
+            A = new Pixel( 219, 63);
+            B = new Pixel( 220, 177);
+            C = new Pixel( 223, 401);
+            D = new Pixel( 218, 98);
+            E = new Pixel( 221, 259);
+            F = new Pixel( 158, 129);
+            G = new Pixel( 64, 200);
+            H = new Pixel( 282, 131);
+            I = new Pixel( 366, 200);
+            J = new Pixel( 140, 493);
+            K = new Pixel( 188, 537);
+            L = new Pixel( 242, 492);
+            M = new Pixel( 283, 534);
+
+            circle1 = new Circle( A, D);
+            circle2 = new Circle( B, D);
+            circle3 = new Circle( C, E);
+
+            line1 = new Line( F, G);
+            line2 = new Line( H, I);
+
+            box1 = new Box( J, K);
+            box2 = new Box( L, M);
         }
 
         private void Draw()
         {
             //graphics.DrawRectangle( pen, 100, 100, 200, 200);
             Draw(box1);
+            Draw(box2);
             Draw(line1);
             Draw(line2);
             Draw(circle1);
             Draw(circle2);
-            Draw(cl1);
-            Draw(cl2);
+            Draw(circle3);
             pictureBox.Image = bitmap;
         }
 
