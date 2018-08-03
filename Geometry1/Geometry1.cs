@@ -27,13 +27,6 @@ namespace Geometry1
         Graphics graphics;
         Pen pen;
 
-
-
-        ColorLine cl1;
-        ColorLine cl2;
-
-        ColorBox colorBox;
-
         Circle circle1;
         Circle circle2;
         Circle circle3;
@@ -42,14 +35,22 @@ namespace Geometry1
         Box box1;
         Box box2;
 
-        ColorCircle colorCircle;
+        ColorCircle circle21;
+        ColorCircle circle22;
+        ColorCircle circle23;
+        ColorLine line21;
+        ColorLine line22;
+        ColorBox box21;
+        ColorBox box22;
+
 
         Pixel A, B, C, D, E, O, F, G, H, I, J, K, L ,M;
 
         public Geometry1()
         {
             InitializeComponent();
-            InitSnowMan();
+            InitSnowMan1();
+            InitSnowMan2();
             Init();
             Draw();
         }
@@ -82,7 +83,7 @@ namespace Geometry1
             */
         }
 
-        private void InitSnowMan()
+        private void InitSnowMan1()
         {
             A = new Pixel( 219, 63);
             B = new Pixel( 220, 177);
@@ -109,6 +110,34 @@ namespace Geometry1
             box2 = new Box( L, M);
         }
 
+        private void InitSnowMan2()
+        {
+            int delta = 400;
+            A = new Pixel( delta + 219, 63);
+            B = new Pixel( delta + 220, 177);
+            C = new Pixel( delta + 223, 401);
+            D = new Pixel( delta + 218, 98);
+            E = new Pixel( delta + 221, 259);
+            F = new Pixel( delta + 158, 129);
+            G = new Pixel( delta + 64, 200);
+            H = new Pixel( delta + 282, 131);
+            I = new Pixel( delta + 366, 200);
+            J = new Pixel( delta + 140, 493);
+            K = new Pixel( delta + 188, 537);
+            L = new Pixel( delta + 242, 492);
+            M = new Pixel( delta + 283, 534);
+
+            circle21 = new ColorCircle( A, D, Color.Red);
+            circle22 = new ColorCircle( B, D, Color.Orange);
+            circle23 = new ColorCircle( C, E, Color.Green);
+
+            line21 = new ColorLine( F, G, Color.Blue);
+            line22 = new ColorLine( H, I, Color.Blue);
+
+            box21 = new ColorBox( J, K, Color.Red);
+            box22 = new ColorBox( L, M, Color.Red);
+        }
+
         private void Draw()
         {
             //graphics.DrawRectangle( pen, 100, 100, 200, 200);
@@ -119,6 +148,14 @@ namespace Geometry1
             Draw(circle1);
             Draw(circle2);
             Draw(circle3);
+
+            Draw(box21);
+            Draw(box22);
+            Draw(line21);
+            Draw(line22);
+            Draw(circle21);
+            Draw(circle22);
+            Draw(circle23);
             pictureBox.Image = bitmap;
         }
 
