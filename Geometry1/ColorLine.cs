@@ -7,16 +7,12 @@ using System.Threading.Tasks;
 
 namespace Geometry1
 {
-    class ColorLine
+    class ColorLine: Line
     {
-        public Pixel begin;
-        public Pixel ended;
         public Pen pen;
 
-        public ColorLine(Pixel begin, Pixel ended, Color color)
+        public ColorLine(Pixel begin, Pixel ended, Color color): base( begin, ended)
         {
-            this.begin = begin;
-            this.ended = ended;
             this.pen = new Pen(color);
         }
 

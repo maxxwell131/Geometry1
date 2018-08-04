@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Geometry1
 {
-    class ColorBox
+    class ColorBox: Box
     {
-        public Pixel corner1;
-        public Pixel corner2;
-        public int width;
-        public int height;
         public Pen pen;
 
         public ColorBox
@@ -19,12 +15,8 @@ namespace Geometry1
         {
         }
 
-        public ColorBox(Pixel lu, Pixel rd, Color color)
+        public ColorBox(Pixel lu, Pixel rd, Color color): base( lu, rd)
         {
-            this.corner1 = lu;
-            this.corner2 = rd;
-            width = Math.Abs(this.corner1.x - this.corner2.x);
-            height = Math.Abs(this.corner1.y - this.corner2.y);
             this.pen = new Pen(color);
         }
     }

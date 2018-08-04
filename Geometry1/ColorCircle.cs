@@ -6,20 +6,12 @@ using System.Threading.Tasks;
 
 namespace Geometry1
 {
-    class ColorCircle
+    class ColorCircle: Circle
     {
-        public Pixel center;
-        public int radius;
-        public Pixel corner;
-        public int width, height;
         public Pen pen;
 
-        public ColorCircle(Pixel center, int radius, Color color)
+        public ColorCircle(Pixel center, int radius, Color color): base(center, radius)
         {
-            this.center = center;
-            this.radius = radius;
-            this.corner = new Pixel((this.center.x - this.radius), (this.center.y - this.radius));
-            this.width = this.height = this.radius * 2;
             this.pen = new Pen(color);
         }
 
