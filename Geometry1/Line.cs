@@ -1,6 +1,6 @@
 ﻿namespace Geometry1
 {
-    class Line
+    class Line: Shape
     {
         public Pixel begin;
         public Pixel ended;

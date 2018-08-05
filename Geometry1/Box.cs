@@ -2,7 +2,7 @@
 
 namespace Geometry1
 {
-    class Box
+    class Box:Shape
     {
         public Pixel corner1;
         public Pixel corner2;

@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Geometry1
@@ -27,22 +28,8 @@ namespace Geometry1
         Graphics graphics;
         Pen pen;
 
-        Circle circle1;
-        Circle circle2;
-        Circle circle3;
-        Line line1;
-        Line line2;
-        Box box1;
-        Box box2;
-
-        ColorCircle circle21;
-        ColorCircle circle22;
-        ColorCircle circle23;
-        ColorLine line21;
-        ColorLine line22;
-        ColorBox box21;
-        ColorBox box22;
-
+        Shape[] snowMan1;
+        Shape[] snowMan2;
 
         Pixel A, B, C, D, E, O, F, G, H, I, J, K, L ,M;
 
@@ -60,27 +47,6 @@ namespace Geometry1
             bitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
             graphics = Graphics.FromImage(bitmap);
             pen = new Pen(Color.Blue);
-
-            /*
-            A = new Pixel( 100, 300);
-            B = new Pixel( 300, 300);
-            C = new Pixel( 100, 100);
-            D = new Pixel( 300, 100);
-            E = new Pixel( 200, 10);
-            O = new Pixel( 200, 200);
-
-            line1 = new Line( C, E);
-            line2 = new Line( E.x, E.y, D.x, D.y); //new Line( E, D); вызов второго конструктора
-
-            box1 = new Box( C, B);
-            colorBox = new ColorBox(O, B, Color.Green);
-
-            circle1 = new Circle( O, 100);
-            colorCircle = new ColorCircle( O, A, Color.Orange);
-
-            cl1 = new ColorLine( A, D, Color.Red);
-            cl2 = new ColorLine( B, C, Color.Red);
-            */
         }
 
         private void InitSnowMan1()
@@ -99,15 +65,17 @@ namespace Geometry1
             L = new Pixel( 242, 492);
             M = new Pixel( 283, 534);
 
-            circle1 = new Circle( A, D);
-            circle2 = new Circle( B, D);
-            circle3 = new Circle( C, E);
+            snowMan1 = new Shape[7];
 
-            line1 = new Line( F, G);
-            line2 = new Line( H, I);
+            snowMan1[0] = new Circle( A, D); //circle1
+            snowMan1[1] = new Circle( B, D); //circle2
+            snowMan1[2] = new Circle( C, E); //circle3
 
-            box1 = new Box( J, K);
-            box2 = new Box( L, M);
+            snowMan1[3] = new Line( F, G); //line1
+            snowMan1[4] = new Line( H, I); //line2
+
+            snowMan1[5] = new Box( J, K); //box1
+            snowMan1[6] = new Box( L, M); //box2
         }
 
         private void InitSnowMan2()
@@ -127,36 +95,60 @@ namespace Geometry1
             L = new Pixel( delta + 242, 492);
             M = new Pixel( delta + 283, 534);
 
-            circle21 = new ColorCircle( A, D, Color.Red);
-            circle22 = new ColorCircle( B, D, Color.Orange);
-            circle23 = new ColorCircle( C, E, Color.Green);
+            snowMan2 = new Shape[7];
 
-            line21 = new ColorLine( F, G, Color.Blue);
-            line22 = new ColorLine( H, I, Color.Blue);
+            snowMan2[0] = new ColorCircle( A, D, Color.Red); //circle21
+            snowMan2[1] = new ColorCircle( B, D, Color.Orange);
+            snowMan2[2] = new ColorCircle( C, E, Color.Green);
 
-            box21 = new ColorBox( J, K, Color.Red);
-            box22 = new ColorBox( L, M, Color.Red);
+            snowMan2[3] = new ColorLine( F, G, Color.Blue);
+            snowMan2[4] = new ColorLine( H, I, Color.Blue);
+
+            snowMan2[5] = new ColorBox( J, K, Color.Red);
+            snowMan2[6] = new ColorBox( L, M, Color.Red);
         }
 
         private void Draw()
         {
             //graphics.DrawRectangle( pen, 100, 100, 200, 200);
-            Draw(box1);
-            Draw(box2);
-            Draw(line1);
-            Draw(line2);
-            Draw(circle1);
-            Draw(circle2);
-            Draw(circle3);
+            for (int i = 0; i < snowMan1.Length; i++)
+            {
+                Draw(snowMan1[i]);
+            }
 
-            Draw(box21);
-            Draw(box22);
-            Draw(line21);
-            Draw(line22);
-            Draw(circle21);
-            Draw(circle22);
-            Draw(circle23);
+            for (int i = 0; i < snowMan2.Length; i++)
+            {
+                Draw(snowMan2[i]);
+            }
             pictureBox.Image = bitmap;
+        }
+
+        private void Draw(Shape shape)
+        {
+            if (shape.GetType() == typeof(Circle))
+            {
+                Draw((Circle)shape);
+            }
+            else if (shape.GetType() == typeof(ColorCircle))
+            {
+                Draw((ColorCircle)shape);
+            }
+            else if (shape.GetType() == typeof(Line))
+            {
+                Draw((Line)shape);
+            }
+            else if (shape.GetType() == typeof(ColorLine))
+            {
+                Draw((ColorLine)shape);
+            }
+            else if (shape.GetType() == typeof(Box)) 
+            {
+                Draw((Box)shape);
+            }
+            else if (shape.GetType() == typeof(ColorBox))
+            {
+                Draw((ColorBox)shape);
+            }
         }
 
         private void Draw(Line line)

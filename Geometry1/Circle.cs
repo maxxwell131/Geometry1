@@ -1,6 +1,6 @@
 ﻿namespace Geometry1
 {
-    class Circle
+    class Circle: Shape
     {
         public Pixel center;
         public int radius;
