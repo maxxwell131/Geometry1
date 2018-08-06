@@ -110,17 +110,17 @@ namespace Geometry1
 
         private void Draw()
         {
-            //graphics.DrawRectangle( pen, 100, 100, 200, 200);
-            for (int i = 0; i < snowMan1.Length; i++)
-            {
-                Draw(snowMan1[i]);
-            }
-
-            for (int i = 0; i < snowMan2.Length; i++)
-            {
-                Draw(snowMan2[i]);
-            }
+            Draw(snowMan1);
+            Draw(snowMan2);
             pictureBox.Image = bitmap;
+        }
+
+        private void Draw(Shape[] shapes)
+        {
+            for (int i = 0; i < shapes.Length; i++)
+            {
+                Draw(shapes[i]);
+            }
         }
 
         private void Draw(Shape shape)

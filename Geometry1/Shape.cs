@@ -8,5 +8,6 @@ namespace Geometry1
 {
     class Shape
     {
+        Pixel pixel;
     }
 }
