@@ -1,4 +1,6 @@
-﻿namespace Geometry1
+﻿using System.Drawing;
+
+namespace Geometry1
 {
     class Circle: Shape
     {
@@ -6,6 +8,19 @@
         public int radius;
         public Pixel corner;
         public int width, height;
+
+        protected Graphics graph;
+        protected Pen pen;
+
+        public void SetGraphics(Graphics graphics)
+        {
+            this.graph = graphics;
+        }
+
+        public void SetPen(Pen pen)
+        {
+            this.pen = pen;
+        }
 
         public Circle(Pixel center, int radius)
         {
@@ -22,14 +37,12 @@
 
         public Circle(Pixel center, Pixel pixel): this( center, center.distance(pixel))
         {
-            /*
-             * double radius = System.Math.Sqrt((center.x - pixel.x) * (center.x - pixel.x) +
-                                       (center.y - pixel.y) * (center.y - pixel.y));
-            this.center = center;
-            this.radius = System.Convert.ToInt32(radius);
-            this.corner = new Pixel((this.center.x - this.radius), (this.center.y - this.radius));
-            this.width = this.height = this.radius * 2;
-            */
+        }
+
+        public void Draw()
+        {
+            graph.DrawEllipse(pen, corner.x, corner.y, width, height);
+
         }
     }
 }
