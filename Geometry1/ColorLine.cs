@@ -9,8 +9,6 @@ namespace Geometry1
 {
     class ColorLine: Line
     {
-        public Pen pen;
-
         public ColorLine(Pixel begin, Pixel ended, Color color): base( begin, ended)
         {
             this.pen = new Pen(color);

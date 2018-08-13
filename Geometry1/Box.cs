@@ -21,6 +21,11 @@ namespace Geometry1
             width = Math.Abs(this.corner1.x - this.corner2.x);
             height = Math.Abs(this.corner1.y - this.corner2.y);
         }
+
+        public void Draw()
+        {
+            graph.DrawRectangle(pen, corner1.x, corner1.y, width, height);
+        }
     }
 
     

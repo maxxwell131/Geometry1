@@ -68,22 +68,19 @@ namespace Geometry1
             snowMan1 = new Shape[7];
 
             snowMan1[0] = new Circle( A, D); //circle1
-            ((Circle)snowMan1[0]).SetGraphics(graphics);
-            ((Circle)snowMan1[0]).SetPen(pen);
+            
 
-            snowMan1[1] = new Circle( B, D); //circle2
-            ((Circle)snowMan1[1]).SetGraphics(graphics);
-            ((Circle)snowMan1[1]).SetPen(pen);
-
+            snowMan1[1] = new Circle( B, D); //circle2       
             snowMan1[2] = new Circle( C, E); //circle3
-            ((Circle)snowMan1[2]).SetGraphics(graphics);
-            ((Circle)snowMan1[2]).SetPen(pen);
-
             snowMan1[3] = new Line( F, G); //line1
             snowMan1[4] = new Line( H, I); //line2
-
             snowMan1[5] = new Box( J, K); //box1
             snowMan1[6] = new Box( L, M); //box2
+
+            foreach (Shape item in snowMan1)
+            {
+                item.SetGraphics(graphics);
+            }
         }
 
         private void InitSnowMan2()
@@ -114,6 +111,11 @@ namespace Geometry1
 
             snowMan2[5] = new ColorBox( J, K, Color.Red);
             snowMan2[6] = new ColorBox( L, M, Color.Red);
+
+            foreach (Shape item in snowMan2)
+            {
+                item.SetGraphics(graphics);
+            }
         }
 
         private void Draw()
@@ -135,61 +137,28 @@ namespace Geometry1
         {
             if (shape.GetType() == typeof(Circle))
             {
-                //Draw((Circle)shape);
                 ((Circle)shape).Draw();
             }
             else if (shape.GetType() == typeof(ColorCircle))
             {
-                Draw((ColorCircle)shape);
+                ((ColorCircle)shape).Draw();
             }
             else if (shape.GetType() == typeof(Line))
             {
-                Draw((Line)shape);
+                ((Line)shape).Draw();
             }
             else if (shape.GetType() == typeof(ColorLine))
             {
-                Draw((ColorLine)shape);
+                ((ColorLine)shape).Draw();
             }
             else if (shape.GetType() == typeof(Box)) 
             {
-                Draw((Box)shape);
+                ((Box)shape).Draw();
             }
             else if (shape.GetType() == typeof(ColorBox))
             {
-                Draw((ColorBox)shape);
+                ((ColorBox)shape).Draw();
             }
-        }
-
-        private void Draw(Line line)
-        {
-            graphics.DrawLine(pen, line.begin.x, line.begin.y, line.ended.x, line.ended.y);
-        }
-
-        private void Draw(ColorLine line)
-        {
-            graphics.DrawLine(line.pen, line.begin.x, line.begin.y, line.ended.x, line.ended.y);
-        }
-
-        private void Draw(Box box)
-        {
-            graphics.DrawRectangle(pen, box.corner1.x, box.corner1.y, box.width, box.height);
-        }
-
-        private void Draw(ColorBox box)
-        {
-            graphics.DrawRectangle(box.pen, box.corner1.x, box.corner1.y, box.width, box.height);
-        }
-
-        /*
-        private void Draw(Circle circle)
-        {
-            graphics.DrawEllipse(pen, circle.corner.x, circle.corner.y, circle.width, circle.height);
-        }
-        */
-
-        private void Draw(ColorCircle circle)
-        {
-            graphics.DrawEllipse(circle.pen, circle.corner.x, circle.corner.y, circle.width, circle.height);
         }
     }
 }

@@ -15,5 +15,10 @@
         public Line( int x1, int y1, int x2, int y2) :this(new Pixel(x1, y1), new Pixel(x2, y2))
         {
         }
+
+        public void Draw()
+        {
+            graph.DrawLine(pen, begin.x, begin.y, ended.x, ended.y);
+        }
     }
 }

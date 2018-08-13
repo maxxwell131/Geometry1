@@ -8,8 +8,6 @@ namespace Geometry1
 {
     class ColorCircle: Circle
     {
-        public Pen pen;
-
         public ColorCircle(Pixel center, int radius, Color color): base(center, radius)
         {
             this.pen = new Pen(color);

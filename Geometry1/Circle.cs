@@ -9,18 +9,9 @@ namespace Geometry1
         public Pixel corner;
         public int width, height;
 
-        protected Graphics graph;
-        protected Pen pen;
 
-        public void SetGraphics(Graphics graphics)
-        {
-            this.graph = graphics;
-        }
 
-        public void SetPen(Pen pen)
-        {
-            this.pen = pen;
-        }
+
 
         public Circle(Pixel center, int radius)
         {
