@@ -22,7 +22,7 @@ namespace Geometry1
             height = Math.Abs(this.corner1.y - this.corner2.y);
         }
 
-        public void Draw()
+        override public void Draw()
         {
             graph.DrawRectangle(pen, corner1.x, corner1.y, width, height);
         }

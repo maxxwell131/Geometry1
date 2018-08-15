@@ -16,7 +16,7 @@
         {
         }
 
-        public void Draw()
+        override public void Draw()
         {
             graph.DrawLine(pen, begin.x, begin.y, ended.x, ended.y);
         }

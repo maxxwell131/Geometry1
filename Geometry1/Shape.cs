@@ -2,7 +2,7 @@
 
 namespace Geometry1
 {
-    class Shape
+    abstract class Shape
     {
         Pixel pixel;
         protected Graphics graph;
@@ -18,5 +18,6 @@ namespace Geometry1
             this.graph = graphics;
         }
 
+        abstract public void Draw();
     }
 }
