@@ -5,6 +5,7 @@ namespace Geometry1
     abstract class Shape
     {
         Pixel pixel;
+        protected Pixel position;
         protected Graphics graph;
         protected Pen pen;
 
@@ -19,5 +20,10 @@ namespace Geometry1
         }
 
         abstract public void Draw();
+
+        public void Move(Pixel position)
+        {
+            this.position = position;
+        }
     }
 }

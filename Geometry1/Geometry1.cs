@@ -31,15 +31,27 @@ namespace Geometry1
         Sprite snowMan1;
         Sprite snowMan2;
 
+        Circle circle;
+
         Pixel A, B, C, D, E, O, F, G, H, I, J, K, L ,M;
+
+        private void buttonMoveMe_Click(object sender, EventArgs e)
+        {
+            circle.Move(new Pixel( 150, 200));
+            circle.SetGraphics(graphics);
+            pictureBox.Image = bitmap;
+            circle.Draw();
+        }
 
         public Geometry1()
         {
             InitializeComponent();
             Init();
-            InitSnowMan1();
-            InitSnowMan2();
-            Draw();
+
+            Demo();
+            //InitSnowMan1();
+            //InitSnowMan2();
+            //Draw();
         }
 
         private void Init()
@@ -111,6 +123,16 @@ namespace Geometry1
             snowMan1.Draw();
             snowMan2.Draw();
             pictureBox.Image = bitmap;
+        }
+
+        private void Demo()
+        {
+            A = new Pixel( 0, 0);
+            circle = new Circle( A, 20);
+            circle.SetGraphics(graphics);
+            pictureBox.Image = bitmap;
+            circle.Move( new Pixel( 100, 100));
+            circle.Draw();
         }
     }
 }
