@@ -28,8 +28,8 @@ namespace Geometry1
         Graphics graphics;
         Pen pen;
 
-        Shape[] snowMan1;
-        Shape[] snowMan2;
+        Sprite snowMan1;
+        Sprite snowMan2;
 
         Pixel A, B, C, D, E, O, F, G, H, I, J, K, L ,M;
 
@@ -65,22 +65,15 @@ namespace Geometry1
             L = new Pixel( 242, 492);
             M = new Pixel( 283, 534);
 
-            snowMan1 = new Shape[7];
-
-            snowMan1[0] = new Circle( A, D); //circle1
-            
-
-            snowMan1[1] = new Circle( B, D); //circle2       
-            snowMan1[2] = new Circle( C, E); //circle3
-            snowMan1[3] = new Line( F, G); //line1
-            snowMan1[4] = new Line( H, I); //line2
-            snowMan1[5] = new Box( J, K); //box1
-            snowMan1[6] = new Box( L, M); //box2
-
-            foreach (Shape item in snowMan1)
-            {
-                item.SetGraphics(graphics);
-            }
+            snowMan1 = new Sprite();
+            snowMan1.SetGraphics(graphics);
+            snowMan1.AddShape(new Circle( A, D)); //circle1
+            snowMan1.AddShape(new Circle( B, D)); //circle2       
+            snowMan1.AddShape(new Circle( C, E)); //circle3
+            snowMan1.AddShape(new Line( F, G)); //line1
+            snowMan1.AddShape(new Line( H, I)); //line2
+            snowMan1.AddShape(new Box( J, K)); //box1
+            snowMan1.AddShape(new Box( L, M)); //box2
         }
 
         private void InitSnowMan2()
@@ -100,37 +93,24 @@ namespace Geometry1
             L = new Pixel( delta + 242, 492);
             M = new Pixel( delta + 283, 534);
 
-            snowMan2 = new Shape[7];
+            snowMan2 = new Sprite();
+            snowMan2.SetGraphics(graphics);
+            snowMan2.AddShape(new ColorCircle( A, D, Color.Red)); //circle21
+            snowMan2.AddShape(new ColorCircle( B, D, Color.Orange));
+            snowMan2.AddShape(new ColorCircle( C, E, Color.Green));
 
-            snowMan2[0] = new ColorCircle( A, D, Color.Red); //circle21
-            snowMan2[1] = new ColorCircle( B, D, Color.Orange);
-            snowMan2[2] = new ColorCircle( C, E, Color.Green);
+            snowMan2.AddShape(new ColorLine( F, G, Color.Blue));
+            snowMan2.AddShape(new ColorLine( H, I, Color.Blue));
 
-            snowMan2[3] = new ColorLine( F, G, Color.Blue);
-            snowMan2[4] = new ColorLine( H, I, Color.Blue);
-
-            snowMan2[5] = new ColorBox( J, K, Color.Red);
-            snowMan2[6] = new ColorBox( L, M, Color.Red);
-
-            foreach (Shape item in snowMan2)
-            {
-                item.SetGraphics(graphics);
-            }
+            snowMan2.AddShape(new ColorBox( J, K, Color.Red));
+            snowMan2.AddShape(new ColorBox( L, M, Color.Red));
         }
 
         private void Draw()
         {
-            Draw(snowMan1);
-            Draw(snowMan2);
+            snowMan1.Draw();
+            snowMan2.Draw();
             pictureBox.Image = bitmap;
-        }
-
-        private void Draw(Shape[] shapes)
-        {
-            for (int i = 0; i < shapes.Length; i++)
-            {
-                shapes[i].Draw();
-            }
         }
     }
 }
