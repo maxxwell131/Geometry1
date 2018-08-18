@@ -42,10 +42,10 @@ namespace Geometry1
             InitializeComponent();
             Init();
 
-            Demo();
-            //InitSnowMan1();
-            //InitSnowMan2();
-            //Draw();
+            //Demo();
+            InitSnowMan1();
+            InitSnowMan2();
+            Draw();
         }
 
         private void Init()
@@ -84,20 +84,19 @@ namespace Geometry1
 
         private void InitSnowMan2()
         {
-            int delta = 400;
-            A = new Pixel( delta + 219, 63);
-            B = new Pixel( delta + 220, 177);
-            C = new Pixel( delta + 223, 401);
-            D = new Pixel( delta + 218, 98);
-            E = new Pixel( delta + 221, 259);
-            F = new Pixel( delta + 158, 129);
-            G = new Pixel( delta + 64, 200);
-            H = new Pixel( delta + 282, 131);
-            I = new Pixel( delta + 366, 200);
-            J = new Pixel( delta + 140, 493);
-            K = new Pixel( delta + 188, 537);
-            L = new Pixel( delta + 242, 492);
-            M = new Pixel( delta + 283, 534);
+            A = new Pixel( 219, 63);
+            B = new Pixel(  220, 177);
+            C = new Pixel(  223, 401);
+            D = new Pixel(  218, 98);
+            E = new Pixel(  221, 259);
+            F = new Pixel(  158, 129);
+            G = new Pixel(  64, 200);
+            H = new Pixel(  282, 131);
+            I = new Pixel(  366, 200);
+            J = new Pixel(  140, 493);
+            K = new Pixel(  188, 537);
+            L = new Pixel(  242, 492);
+            M = new Pixel(  283, 534);
 
             snowMan2 = new Sprite();
             snowMan2.SetGraphics(graphics);
@@ -110,6 +109,7 @@ namespace Geometry1
 
             snowMan2.AddShape(new ColorBox( J, K, Color.Red));
             snowMan2.AddShape(new ColorBox( L, M, Color.Red));
+            snowMan2.Move(new Pixel( 250, 0));
         }
 
         private void Draw()
@@ -121,16 +121,11 @@ namespace Geometry1
 
         private void buttonMoveMe_Click(object sender, EventArgs e)
         {
-            Pixel pixelMove = new Pixel(150, 200);
+            Pixel pixelMove = new Pixel(10, 2);
 
-            circle.Move(pixelMove);
-            circle.Draw();
-
-            line.Move(pixelMove);
-            line.Draw();
-
-            box.Move(pixelMove);
-            box.Draw();
+            snowMan1.Move(pixelMove);
+            snowMan2.Move(new Pixel( 250, 2));
+            Draw();
 
             pictureBox.Image = bitmap;
         }

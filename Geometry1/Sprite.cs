@@ -33,5 +33,14 @@ namespace Geometry1
                 item.Draw();
             }
         }
+
+        override public void Move(Pixel position)
+        {
+            base.Move(position);
+            foreach (Shape shape in shapes)
+            {
+                shape.Move(position);
+            }
+        }
     }
 }
