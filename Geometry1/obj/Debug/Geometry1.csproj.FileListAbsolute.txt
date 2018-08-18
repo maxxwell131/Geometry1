@@ -1,0 +1,50 @@
+C:\Users\User\source\repos\Geometry1\Geometry1\bin\Debug\Geometry1.exe.config
+C:\Users\User\source\repos\Geometry1\Geometry1\bin\Debug\Geometry1.exe
+C:\Users\User\source\repos\Geometry1\Geometry1\bin\Debug\Geometry1.pdb
+C:\Users\User\source\repos\Geometry1\Geometry1\obj\Debug\Geometry1.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Geometry1\Geometry1\obj\Debug\Geometry1.Geometry1.resources
+C:\Users\User\source\repos\Geometry1\Geometry1\obj\Debug\Geometry1.Properties.Resources.resources
+C:\Users\User\source\repos\Geometry1\Geometry1\obj\Debug\Geometry1.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Geometry1\Geometry1\obj\Debug\Geometry1.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Geometry1\Geometry1\obj\Debug\Geometry1.exe
+C:\Users\User\source\repos\Geometry1\Geometry1\obj\Debug\Geometry1.pdb
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-master\Geometry1\bin\Debug\Geometry1.exe.config
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-master\Geometry1\bin\Debug\Geometry1.exe
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-master\Geometry1\bin\Debug\Geometry1.pdb
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-master\Geometry1\obj\Debug\Geometry1.csprojAssemblyReference.cache
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-master\Geometry1\obj\Debug\Geometry1.Geometry1.resources
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-master\Geometry1\obj\Debug\Geometry1.Properties.Resources.resources
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-master\Geometry1\obj\Debug\Geometry1.csproj.GenerateResource.cache
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-master\Geometry1\obj\Debug\Geometry1.csproj.CoreCompileInputs.cache
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-master\Geometry1\obj\Debug\Geometry1.exe
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-master\Geometry1\obj\Debug\Geometry1.pdb
+C:\Users\Owner\Downloads\Geometry1-lesson7\Geometry1-lesson7\Geometry1\bin\Debug\Geometry1.exe.config
+C:\Users\Owner\Downloads\Geometry1-lesson7\Geometry1-lesson7\Geometry1\bin\Debug\Geometry1.exe
+C:\Users\Owner\Downloads\Geometry1-lesson7\Geometry1-lesson7\Geometry1\bin\Debug\Geometry1.pdb
+C:\Users\Owner\Downloads\Geometry1-lesson7\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.csprojAssemblyReference.cache
+C:\Users\Owner\Downloads\Geometry1-lesson7\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.Geometry1.resources
+C:\Users\Owner\Downloads\Geometry1-lesson7\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.Properties.Resources.resources
+C:\Users\Owner\Downloads\Geometry1-lesson7\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.csproj.GenerateResource.cache
+C:\Users\Owner\Downloads\Geometry1-lesson7\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Downloads\Geometry1-lesson7\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.exe
+C:\Users\Owner\Downloads\Geometry1-lesson7\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.pdb
+C:\Users\Owner\Documents\Project\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.csprojAssemblyReference.cache
+C:\Users\Owner\Documents\Project\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.exe
+C:\Users\Owner\Documents\Project\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.pdb
+C:\Users\Owner\Documents\Project\Geometry1-lesson7\Geometry1\bin\Debug\Geometry1.exe.config
+C:\Users\Owner\Documents\Project\Geometry1-lesson7\Geometry1\bin\Debug\Geometry1.exe
+C:\Users\Owner\Documents\Project\Geometry1-lesson7\Geometry1\bin\Debug\Geometry1.pdb
+C:\Users\Owner\Documents\Project\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.Geometry1.resources
+C:\Users\Owner\Documents\Project\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.Properties.Resources.resources
+C:\Users\Owner\Documents\Project\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.csproj.GenerateResource.cache
+C:\Users\Owner\Documents\Project\Geometry1-lesson7\Geometry1\obj\Debug\Geometry1.csproj.CoreCompileInputs.cache
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-lesson20\Geometry1\bin\Debug\Geometry1.exe.config
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-lesson20\Geometry1\bin\Debug\Geometry1.exe
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-lesson20\Geometry1\bin\Debug\Geometry1.pdb
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-lesson20\Geometry1\obj\Debug\Geometry1.csprojAssemblyReference.cache
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-lesson20\Geometry1\obj\Debug\Geometry1.Geometry1.resources
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-lesson20\Geometry1\obj\Debug\Geometry1.Properties.Resources.resources
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-lesson20\Geometry1\obj\Debug\Geometry1.csproj.GenerateResource.cache
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-lesson20\Geometry1\obj\Debug\Geometry1.csproj.CoreCompileInputs.cache
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-lesson20\Geometry1\obj\Debug\Geometry1.exe
+C:\Users\x220\Documents\Visual Studio 2017\[Project]\[videosharp.info]\Geometry1-lesson20\Geometry1\obj\Debug\Geometry1.pdb
